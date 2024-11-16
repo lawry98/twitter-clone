@@ -1,11 +1,8 @@
 import { Link } from "react-router-dom";
 import { useState } from "react";
 
-import { MdOutlineMail } from "react-icons/md";
-import { FaUser } from "react-icons/fa";
-import { MdPassword } from "react-icons/md";
-import { MdDriveFileRenameOutline } from "react-icons/md";
-import Logo from "../svg/logo";
+import { AiOutlineMail, AiOutlineUser, AiOutlineLock, AiOutlineIdcard} from "react-icons/ai";
+import StarSvg from "../svg/logo";
 
 export const RegisterPage = () => {
 	const [formData, setFormData] = useState({
@@ -29,14 +26,14 @@ export const RegisterPage = () => {
 	return (
 		<div className='max-w-screen-xl mx-auto flex h-screen px-10'>
 			<div className='flex-1 hidden lg:flex items-center  justify-center'>
-				{/* <Logo className=' lg:w-2/3 fill-white' /> */}
+				<StarSvg className=' lg:w-2/3 fill-white' />
 			</div>
 			<div className='flex-1 flex flex-col justify-center items-center'>
 				<form className='lg:w-2/3  mx-auto md:mx-20 flex gap-4 flex-col' onSubmit={handleSubmit}>
-					{/* <Logo className='w-24 lg:hidden fill-white' /> */}
+					<StarSvg className='w-24 lg:hidden fill-white' />
 					<h1 className='text-4xl font-extrabold text-white'>Join today.</h1>
 					<label className='input input-bordered rounded flex items-center gap-2'>
-						<MdOutlineMail />
+						<AiOutlineMail />
 						<input
 							type='email'
 							className='grow'
@@ -48,7 +45,7 @@ export const RegisterPage = () => {
 					</label>
 					<div className='flex gap-4 flex-wrap'>
 						<label className='input input-bordered rounded flex items-center gap-2 flex-1'>
-							<FaUser />
+							<AiOutlineUser />
 							<input
 								type='text'
 								className='grow '
@@ -59,7 +56,7 @@ export const RegisterPage = () => {
 							/>
 						</label>
 						<label className='input input-bordered rounded flex items-center gap-2 flex-1'>
-							<MdDriveFileRenameOutline />
+							<AiOutlineIdcard />
 							<input
 								type='text'
 								className='grow'
@@ -71,7 +68,7 @@ export const RegisterPage = () => {
 						</label>
 					</div>
 					<label className='input input-bordered rounded flex items-center gap-2'>
-						<MdPassword />
+						<AiOutlineLock />
 						<input
 							type='password'
 							className='grow'

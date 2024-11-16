@@ -1,11 +1,10 @@
 import { useState } from "react";
 
-//import Posts from "../../components/common/Posts";
-//import CreatePost from "./CreatePost";
-
+import Posts from "../../components/common/Posts";
+import AddPost from "../../pages/home/AddPost";
 export const LandingPage = () => {
 	const [feedType, setFeedType] = useState("forYou");
-
+	
 	return (
 		<>
 			<div className='flex-[4_4_0] mr-auto border-r border-gray-700 min-h-screen'>
@@ -33,11 +32,8 @@ export const LandingPage = () => {
 					</div>
 				</div>
 
-				{/*  CREATE POST INPUT */}
-				{/* <CreatePost /> */}
-
-				{/* POSTS */}
-				{/* <Posts /> */}
+				<AddPost /> 
+				<Posts /> 
 			</div>
 		</>
 	);
